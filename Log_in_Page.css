@@ -1,0 +1,181 @@
+@media screen and (max-width: 700px) {
+    .nav-center  {
+        display: none;
+    }
+    .copyrights .p-left img{
+        display: inline-block;
+        width: 40px;
+    }
+    .p-right h3{
+        font-size: 15px;
+    }
+    .copyrights span{
+        display: inline-block;
+        position:relative;
+        right: 0;
+        font-size: 5px;
+    }
+    
+}
+
+/* loading css start */
+
+/* loading css end */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:linear-gradient(#202020,#111111);}
+
+::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 40px;
+}
+
+* {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background:linear-gradient(#202020,#111111);
+    color: #fff;
+    height: 100vh;
+}
+.content{
+    padding: 10px;
+    /* background-image: url(photos/Madam_Web_880x440-100_1708070192.jpg);
+    background-repeat: no-repeat; */
+    /* background-position: top right;
+    background-size:cover; */
+    /* background: linear-gradient(#0c0c0c,#202020); */
+    background-repeat: no-repeat;
+    background: #000000;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar .nav-center a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 700px;
+    border: #fff solid 1px;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+.navbar .nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar .nav-left a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 10px;
+}
+
+
+
+
+
+
+.main_login{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    /* background: #5c0909; */
+    padding: 20px;
+    text-align: right;
+    border: #ffffff solid 2px;
+    height: 400px;
+    border-radius: 15px;
+    /* background-color: #161414; */
+}
+
+.email_pass{
+    margin: 10px;
+}
+h2{
+    text-align: center;
+}
+
+.email, .pass{
+    text-align: right;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px 5px 0;
+    background: #111111;
+    border: #ffffff solid 1px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+button{
+    /* width: 90%; */
+    margin: 0 auto;
+    cursor: pointer;
+    width: 250px;
+    padding: 5px 0px 5px 50px;
+    border-radius: 35px;
+    transition: .3s;
+    background: #185099;
+    color: #000;
+    border: solid 3px #113f7c;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+    padding-right: 40px;
+}
+button:hover{
+    color: #ffffff;
+    background: #1c58a7;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: #2972d1;
+    font-weight: 600;
+}
+.forgot_pass{
+    margin-bottom: 15px;
+    padding-right: 15px;
+    transition: .3s;
+}
+a:hover{
+    color: #1e5aaa;
+}
+.dont_have_acc{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+}
+.dont_have_acc a{
+    transition: .3s;
+}
+

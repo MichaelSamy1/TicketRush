@@ -1,0 +1,464 @@
+@media screen and (max-width: 700px) {
+    .nav-center  {
+        display: none;
+    }
+    .copyrights .p-left img{
+        display: inline-block;
+        width: 40px;
+    }
+    .p-right h3{
+        font-size: 15px;
+    }
+    .copyrights span{
+        display: inline-block;
+        position:relative;
+        right: 0;
+        font-size: 5px;
+    }
+    
+}
+
+/* loading css start */
+
+/* loading css end */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:linear-gradient(#202020,#111111);}
+
+::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 40px;
+}
+
+* {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+
+body{
+    background:linear-gradient(#202020,#111111);
+    color: #fff;
+    height: 100vh;
+}
+.content{
+    padding: 10px;
+    /* background-image: url(photos/Madam_Web_880x440-100_1708070192.jpg);
+    background-repeat: no-repeat; */
+    /* background-position: top right;
+    background-size:cover; */
+    /* background: linear-gradient(#0c0c0c,#202020); */
+    background-repeat: no-repeat;
+    background: #000000;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar .nav-center a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 700px;
+    border: #fff solid 1px;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+.navbar .nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar .nav-left a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 10px;
+}
+
+
+
+
+/*  */
+
+/* main {
+    padding: 0px 0 50px 0;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+
+.title-right{
+    display: flex;
+    /* width: 100%; */
+    padding: 50px;
+    text-align: right;
+    direction: rtl;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600px;
+}
+.title-right h2{
+    border-bottom: #185099 5px solid;
+    margin-right: 50px;
+}
+
+.center {
+        width: 100%;
+        height: 53%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background:linear-gradient(#202020,#111111); */
+}
+
+
+
+
+.screen {
+    color: white;
+    background: black;
+    width: 350px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.tickets {
+        width: 550px;
+        height: fit-content;
+        border: 0.4mm solid rgba(0, 0, 0, 0.08);
+        border-radius: 3mm;
+        box-sizing: border-box;
+        padding: 10px;
+        font-family: poppins;
+        max-height: 96vh;
+        overflow: auto;
+        background: #000;
+        box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+
+.ticket-selector {
+        background: #2b2b2b69;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+}
+
+
+.head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+}
+
+
+.title {
+        font-size: 16px;
+        font-weight: 600;
+}
+
+
+.seats {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 150px;
+        position: relative;
+}
+
+
+.status {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+}
+
+
+/* .seats::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 220px;
+        height: 7px;
+        background: rgb(5, 43, 82);
+        border-radius: 0 0 3mm 3mm;
+        border-top: 0.3mm solid rgb(180, 180, 180);
+} */
+
+
+.item {
+        font-size: 12px;
+        position: relative;
+} 
+
+
+.item::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -12px;
+        transform: translate(0, -50%);
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        outline: 0.2mm solid rgb(120, 120, 120);
+        border-radius: 0.3mm;
+}
+
+
+.item:nth-child(2)::before {
+        /* background: rgba(77, 77, 77, 0.712); */
+        background: rgb(94 94 94 / 71%);
+        outline: none;
+}
+
+
+.item:nth-child(3)::before {
+        background: #2a74d6;
+        outline: none;
+    }
+
+
+.all-seats {
+        /* display: grid; */
+        grid-template-columns: repeat(10, 1fr);
+        /* grid-gap: 15px; */
+        margin: 60px 0;
+        margin-top: 20px;
+        position: relative;
+}
+
+
+.seat {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 0.5mm;
+        outline: 0.3mm solid rgb(180, 180, 180);
+        cursor: pointer;
+}
+
+
+.all-seats input:checked + label {
+        background: #2a74d6;
+        outline: none;
+}
+
+
+.seat.booked {
+        /* background: rgba(77, 77, 77, 0.712); */
+        background: rgb(94 94 94 / 71%);
+        outline: none;
+}
+
+
+input {
+        display: none;
+}
+
+
+.timings {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+}
+
+
+.dates {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+
+.dates-item {
+        width: 50px;
+        height: 40px;
+        background: #215caa3b;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 0;
+        border-radius: 2mm;
+        cursor: pointer;
+}
+
+
+.day {
+        font-size: 12px;
+}
+
+
+.times {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+}
+
+
+.time {
+        font-size: 14px;
+        width: fit-content;
+        padding: 7px 14px;
+        background: #215caa3b;
+        border-radius: 2mm;
+        cursor: pointer;
+}
+
+
+.timings input:checked + label {
+        background: #215caa;
+        color: white;
+}
+
+
+.price {
+        direction: rtl;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+
+.total {
+        direction: rtl;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+}
+
+
+.total span {
+        font-size: 11px;
+        font-weight: 400;
+}
+
+.seemore_Book button{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    margin: 10px;
+    color: white;
+    font-weight: 600;
+    border: solid 3px #185099;
+    border-radius: 35px;
+    width: 150px;
+    transition: .3s;
+    text-align: center;
+    direction: ltr;
+}
+
+.seemore_Book button:hover{
+    color: #185099;
+    background: #ffffff;
+    border: solid 3px #113f7c;
+    cursor: pointer;
+}
+
+.seemore_Book .book{
+    background: #185099;
+    color: #000;
+    border: solid 3px #113f7c;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.seemore_Book .book:hover{
+    color: #ffffff;
+    background: #1c58a7;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Copyrights */
+.solid{
+    border: 1px solid #fff;
+    opacity: 10%;
+}
+
+.copyrights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+
+    
+}
+
+.copyrights h3{
+    color: #fff;
+}
+
+.copyrights img{
+    width: 60px;
+}
+
+.copyrights span{
+    color: #1c5bac;
+    font-size: 20px;
+    font-weight: 800;
+}
