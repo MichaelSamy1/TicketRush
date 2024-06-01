@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ticket Rush | Matches</title>
+    <title>Ticket Rush | Users</title>
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -75,7 +75,6 @@
                   <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="users.php">Users List</a></li>
-                      
                     </ul>
                   </li>
   
@@ -149,7 +148,71 @@
                     </div>
                   </li>
   
-                  
+                  <!-- <li role="presentation" class="nav-item dropdown open">
+                    <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-envelope-o"></i>
+                      <span class="badge bg-green">6</span>
+                    </a>
+                    <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/profile.png" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/profile.png" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/profile.png" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/profile.png" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="text-center">
+                          <a class="dropdown-item">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  -->
                 </ul>
               </nav>
             </div>
@@ -161,7 +224,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Manage Events</h3>
+                <h3>Manage <small>Users</small></h3>
               </div>
 
               
@@ -173,7 +236,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Matches</h2>
+                    <h2>List of Users</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -194,7 +257,7 @@
                   if($con->connect_error){
                       die("failed to connect:".$con->connect_error);}
                       else{
-                        $q= "SELECT * FROM event WHERE event_type = ('Match')";
+                        $q= "SELECT * FROM user";
                         $result = $con->query($q);
                         $result->fetch_assoc();   
                       }  
@@ -206,34 +269,31 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Type</th>
-                          <th>Event Date</th>
-                          <th>Event Time</th>
-                          <th>Team Name 1</th>
-                          <th>Team Name 2</th>
-                          <th>More Info</th>
-                          <th>Delete</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Date of Birth</th>
+                          <th>Gender</th>
+                          <th>Phone Number</th>
+                          <th>Edit</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        
                       <?php
                         foreach($result as $row)
-                        {echo "     
+                        {echo "      
                             <tr>
-                            <td>{$row['event_title']}</td>
-                            <td>{$row['event_date']}</td>
-                            <td>{$row['event_time']}</td>
-                            <td>{$row['character1']}</td>
-                            <td>{$row['character2']}</td>
-                            <td>{$row['info']}</td>
-                            <td><a href='./delete.php?id=" . urlencode($row['event_id']) . "&redirect=" . urlencode("Matches.php") . "'><img src='./images/delete.png' alt='Delete'/></a></td>
-                            </tr>
-                            ";
+                            <td>{$row['firstname']}</td>
+                            <td>{$row['email']}</td>
+                            <td>{$row['date']}</td>
+                            <td>{$row['gender']}</td>
+                            <td>{$row['phone']}</td>
+                            <td><a href='./edituser.php?id={$row['id']}'><img src='./images/edit.png' alt='Edit'></td>
+                            </tr> ";
                         }
                       ?>
+                        
                         
                       </tbody>
                     </table>

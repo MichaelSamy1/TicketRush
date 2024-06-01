@@ -8,26 +8,26 @@ ini_set('display_errors', 1);
   }
 
 if(isset($_POST['submit'])){
-    $email = $_POST['email'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("select * from user where email = ?");
-        $stmt->bind_param("s",$email);
+    $stmt = $conn->prepare("select * from admin where username = ?");
+        $stmt->bind_param("s",$username);
         $stmt->execute();
         $stmt_res = $stmt->get_result();
         if ($stmt_res->num_rows > 0){
             $data = $stmt_res->fetch_assoc();
             if($data['password'] === $password){
-                $_SESSION["fullname"]=$data['fullname'];
-                header('location: Index.php');
+                $_SESSION["name"]=$data['name'];
+                header('location: users.php');
                 exit;
             }
             else{
-                echo "incorrect email or password";
+                echo "incorrect username or password";
             }
         }
         else {
-            echo "incorrect email or password";
+            echo "incorrect username or password";
         }        
 }
 ?>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ticket Rush | Matches</title>
+    <title>Ticket Rush | Theaters</title>
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -57,8 +57,8 @@
                 <span>Welcome,</span>
                 <h2>
                   <?php
-                  session_start();
-                  echo $_SESSION["name"];
+                    session_start();
+                     echo $_SESSION["name"];
                   ?>
                   </h2>
               </div>
@@ -134,9 +134,9 @@
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                       <img src="images/profile.png" alt="">
-                      <?php
-                  echo $_SESSION["name"];
-                  ?>
+                      <?php        
+                      echo $_SESSION["name"];
+                      ?>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
@@ -173,7 +173,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Matches</h2>
+                    <h2>List of Theaters</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -194,7 +194,7 @@
                   if($con->connect_error){
                       die("failed to connect:".$con->connect_error);}
                       else{
-                        $q= "SELECT * FROM event WHERE event_type = ('Match')";
+                        $q= "SELECT * FROM event WHERE event_type = ('Theater')";
                         $result = $con->query($q);
                         $result->fetch_assoc();   
                       }  
@@ -206,35 +206,31 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Type</th>
                           <th>Event Date</th>
                           <th>Event Time</th>
-                          <th>Team Name 1</th>
-                          <th>Team Name 2</th>
-                          <th>More Info</th>
+                          <th>Title</th>
+                          <th>Info</th>
+                          <th>characters</th>
                           <th>Delete</th>
                         </tr>
                       </thead>
 
-
                       <tbody>
-                        
                       <?php
                         foreach($result as $row)
                         {echo "     
                             <tr>
-                            <td>{$row['event_title']}</td>
                             <td>{$row['event_date']}</td>
                             <td>{$row['event_time']}</td>
-                            <td>{$row['character1']}</td>
-                            <td>{$row['character2']}</td>
+                            <td>{$row['event_title']}</td>
                             <td>{$row['info']}</td>
-                            <td><a href='./delete.php?id=" . urlencode($row['event_id']) . "&redirect=" . urlencode("Matches.php") . "'><img src='./images/delete.png' alt='Delete'/></a></td>
+                            <td>{$row['character1']}</td>
+                            <td><a href='./delete.php?id=" . urlencode($row['event_id']) . "&redirect=" . urlencode("Theater.php") . "'><img src='./images/delete.png' alt='Delete'/></a></td>
                             </tr>
                             ";
                         }
                       ?>
-                        
+                      
                       </tbody>
                     </table>
                   </div>
