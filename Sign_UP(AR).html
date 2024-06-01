@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="CinemaAR.css"> -->
+    <link rel="stylesheet" href="CSS/Sign_UP(AR).css">
+    <title>Ticket Rush | Sign Up</title>
+</head>
+<body>
+    <section class="content">
+        <!-- First Bar Contain left,right,center -->
+        <main class="navbar">
+            <!-- left Contain: Logo(Cinema Time Logo) -->
+            
+            <!-- Center Bar Contain: Main,movies,cinemas -->
+            <div class="nav-center">
+                <a href="Index.html">Ticket Rush</a>
+            </div>
+            <!-- Right Bar Contain: Search,Log In -->
+        </main>
+    </section>
+
+
+
+    <form action="signup.php" method="post" class="main_login">
+        <h2>إنشاء حسابك</h2>
+        <div class="email_pass">
+            <input type="text" class="First_Name" placeholder="الاسم الاول" name="firstname" required>
+            <input type="text" class="Second_Name" placeholder="الاسم الاخير" name="lastname" required>
+            <br>
+            <input type="email" class="email" placeholder="البريد الاكتروني" name="email" required>
+            <br>
+            <input type="date" class="Date" placeholder="تاريخ الميلاد" name="date" style="background: #fff; color: #000;" required>
+            <br>
+            
+            <!-- 
+            <label for="male">ذكر</label>
+            <input type="radio" id="female" name="Gender" value="Female">
+            
+            <label for="female">انثى</label>
+            <input type="radio" id="male" name="Gender" value="Male">
+            <br> -->
+            <select name="gender" id="Gender" style="width: 392px;" required>
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <input type="tel" class="Phone" placeholder="رقم الهاتف" name="Phone" required>
+            <br>
+            <input type="password" class="pass" placeholder="كلمة المرور" name="password" required>
+        </div>
+        <button name="submit" value="submit" type="submit">إنشاء حساب</button>
+        <p class="dont_have_acc">
+        لديك حساب بالفعل؟ <a href="Log_in_Page.html">تسجيل الدخول</a>
+        </p>
+    </form>
+    
+</body>
+</html>
